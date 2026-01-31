@@ -73,7 +73,7 @@ const SidebarContent = ({ active, setActive, onClose, isMobile }: SidebarContent
             position="relative"
             // Efecto de aumento y desplazamiento
             _hover={{ 
-              transform: 'scale(1.05) translateX(5px)',
+              transform: 'scale(1.0) translateX(5px)',
               color: 'blue.500',
               bg: 'gray.50'
             }}
