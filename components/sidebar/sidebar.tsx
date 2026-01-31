@@ -130,16 +130,18 @@ export default function Sidebar() {
         aria-label="Menu"
         display={{ base: 'flex', md: 'none' }}
         onClick={() => setOpen(true)}
-        position="fixed"
-        top={4}
+        position="absolute"
+        top={6}
         left={4}
         variant="outline"
+        zIndex={20}
+        bg="white"
       >
         <HiMenuAlt2 />
       </IconButton>
 
       {/* Render Escritorio */}
-      <Box display={{ base: 'none', md: 'block' }}>
+      <Box display={{ base: 'none', md: 'block' }} position="sticky" top={0} h="100vh">
         <SidebarContent active={active} setActive={setActive} />
       </Box>
 

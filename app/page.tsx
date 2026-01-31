@@ -1,13 +1,8 @@
-import Footer from "../components/footer/footer";
-import Navbar from "../components/navbar/navbar";
-import Sidebar from "../components/sidebar/sidebar";
-
-export default function Main() {
+export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <Sidebar />
-      <Footer />
-    </div>
+    <main>
+      <h1 color="black">Página de Inicio</h1>
+      {/* Aquí va el contenido específico de tu página principal */}
+    </main>
   );
 }

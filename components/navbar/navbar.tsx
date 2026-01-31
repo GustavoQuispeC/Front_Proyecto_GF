@@ -60,7 +60,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box bg="white" px={6} shadow="md" position="sticky" top={0} zIndex={10}>
+    <Box bg="white" px={{ base: 16, md: 6 }} shadow="md" position="sticky" top={0} zIndex={10}>
       <Flex
         h={20}
         alignItems="center"
