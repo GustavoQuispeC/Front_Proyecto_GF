@@ -28,15 +28,7 @@ export default function DashboardLayout(props: { children: React.ReactNode }) {
                     borderBottom="1px solid"
                     borderColor="gray.200"
                 >
-                    <Button
-                        size="sm"
-                        colorScheme="red"
-                        variant="ghost"
-                        onClick={handleLogout}
-                        rightIcon={<HiOutlineLogout />}
-                    >
-                        Cerrar Sesión
-                    </Button>
+                  
                 </HStack>
 
                 {/* Page Content */}
