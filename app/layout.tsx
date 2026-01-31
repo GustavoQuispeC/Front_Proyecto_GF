@@ -12,7 +12,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <Provider>
           <Navbar />
           <Flex minH="100vh">
-            <Sidebar />
+          
             <Box flex="1" bg="gray.50" overflow="auto">
               <Box p={{ base: 4, md: 8 }}>
                 {children}
