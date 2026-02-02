@@ -1,30 +1,28 @@
-"use client"
+'use client';
 
 import {
   Combobox,
   Portal,
   useFilter,
   useListCollection,
-} from "@chakra-ui/react"
+} from "@chakra-ui/react";
 
-
-const Demo = () => {
+export default function  Page() {
   const { contains } = useFilter({ sensitivity: "base" })
 
   const { collection, filter } = useListCollection({
     initialItems: frameworks,
     filter: contains,
-  })
-
+  });
   return (
-    <Combobox.Root
+     <Combobox.Root
       collection={collection}
       onInputValueChange={(e) => filter(e.inputValue)}
       width="320px"
     >
-      <Combobox.Label>Select framework</Combobox.Label>
+      <Combobox.Label>Seleccione framework</Combobox.Label>
       <Combobox.Control>
-        <Combobox.Input placeholder="Type to search" />
+        <Combobox.Input placeholder="Escriba para buscar" />
         <Combobox.IndicatorGroup>
           <Combobox.ClearTrigger />
           <Combobox.Trigger />
@@ -33,7 +31,7 @@ const Demo = () => {
       <Portal>
         <Combobox.Positioner>
           <Combobox.Content>
-            <Combobox.Empty>No items found</Combobox.Empty>
+            <Combobox.Empty>No se encontraron elementos</Combobox.Empty>
             {collection.items.map((item) => (
               <Combobox.Item item={item} key={item.value}>
                 {item.label}
@@ -44,9 +42,8 @@ const Demo = () => {
         </Combobox.Positioner>
       </Portal>
     </Combobox.Root>
-  )
+  );
 }
-
 const frameworks = [
   { label: "React", value: "react" },
   { label: "Solid", value: "solid" },

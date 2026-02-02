@@ -9,14 +9,15 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html suppressHydrationWarning>
       <body>
         <Provider>
-          <Flex direction="column" minH="100vh">
-            <Navbar />
+          <Navbar />
+          <Flex minH="100vh">
+          
             <Box flex="1" bg="gray.50" overflow="auto">
               <Box p={{ base: 4, md: 8 }}>
                 {children}
               </Box>
+              <Footer />
             </Box>
-            <Footer />
           </Flex>
         </Provider>
       </body>
